@@ -2,7 +2,7 @@ const express = require('express');
 const helmet = require('helmet');
 const cors = require('cors');
 
-const Users = require('./users/users-model.js');
+const Users = require('./database/Models/user-model');
 
 const server = express();
 
