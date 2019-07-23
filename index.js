@@ -3,6 +3,8 @@ const helmet = require('helmet');
 const cors = require('cors');
 const knex = require('knex');
 
+require('dotenv').config();
+
 const session = require('express-session');
 const KnexSessionStore = require('connect-session-knex')(session);
 const knexConfig = knex(require('./knexfile').development);
@@ -19,7 +21,7 @@ server.use(express.json());
 server.use(cors());
 server.use(session({
     name: 'sessionId', // name of the cookie
-    secret: 'keep it secret, keep it long', // we intend to encrypt
+    secret: process.env.SECRET, // we intend to encrypt
     cookie: {
         maxAge: 1000 * 60 * 60,
         secure: false,
