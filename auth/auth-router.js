@@ -45,8 +45,11 @@ router.post('/login', (req, res) => {
         // express will be able to see if a session exists for that session id
         req.session.user = user;
         res.status(200).json({
-          message: `Welcome ${user.username}!`,
+          message: `You are Logged In, ${user.username}!`,
         });
+        res.set({
+            'Set-Cookie': `user_id = ${user.id}`
+        })
       } else {
         res.status(401).json({ message: 'Invalid Credentials' });
       }
