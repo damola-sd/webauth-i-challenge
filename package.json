@@ -1,0 +1,38 @@
+{
+  "name": "webauth-i-challenge",
+  "version": "1.0.0",
+  "description": "Authentication Projecct",
+  "main": "index.js",
+  "scripts": {
+    "test": "none"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/damola-sd/webauth-i-challenge.git"
+  },
+  "keywords": [
+    "Hash",
+    "MD5",
+    "Salt"
+  ],
+  "author": "Damola ADewunmi",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/damola-sd/webauth-i-challenge/issues"
+  },
+  "homepage": "https://github.com/damola-sd/webauth-i-challenge#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-session-knex": "^1.4.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-session": "^1.16.2",
+    "helmet": "^3.19.0",
+    "knex": "^0.19.0",
+    "md5": "^2.2.1",
+    "sqlite": "^3.0.3"
+  },
+  "devDependencies": {
+    "dotenv": "^8.0.0"
+  }
+}
